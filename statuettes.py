@@ -10,7 +10,7 @@ def get_indices(arr):
 
     return indices
 
-def get_indices3(arr):
+def get_indices2(arr):
     indices = [0] * len(arr)
 
     for i in range(len(arr)):

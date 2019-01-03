@@ -2,7 +2,7 @@
 
 import random
 
-n = 2000
+n = 100000
 m = 10
 
 tailles = [0] * n
