@@ -5,12 +5,12 @@ import math
 processed = []
 
 def la_meilleure_ville0(villes, n, lignes, m, gares, g):
-
+    """
     for ville in range(1, n + 1):
         for to in range(1, n + 1):
             if (ville != to):
                 get_fastest_path(ville, to, villes, lignes, gares)
-
+    """
 
     for ville in range(1, n+1):
         average = 0
@@ -30,7 +30,7 @@ def la_meilleure_ville0(villes, n, lignes, m, gares, g):
 def get_fastest_path(a, b, villes, lignes, gares, exclude=[-1]):
 
     for p in processed:
-        if (p['from'] == a and p['to'] == b and p['exclude'] == (-1 in exclude)):
+        if (p['from'] == a and p['to'] == b and p['rule'] == exclude):
             return p['tmps']
 
     # En direct
@@ -74,10 +74,13 @@ def get_fastest_path(a, b, villes, lignes, gares, exclude=[-1]):
     if (indirect_gares != -1):
         results.append(indirect_gares)
     if (len(results) == 0):
-        processed.append({'from': a, 'to': b, 'tmps': -1, 'exclude': (-1 in exclude)})
+        #print({'from': a, 'to': b, 'tmps': -1})
+        processed.append({'from': a, 'to': b, 'tmps': -1, 'rule': exclude})
+
         return -1
     else:
-        processed.append({'from': a, 'to': b, 'tmps': min(results), 'exclude': (-1 in exclude)})
+        #print({'from': a, 'to': b, 'tmps': min(results)})
+        processed.append({'from': a, 'to': b, 'tmps': min(results), 'rule': exclude})
         return min(results)
 
 

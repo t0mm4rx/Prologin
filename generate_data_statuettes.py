@@ -1,10 +1,10 @@
 #coding: utf-8
 
 import random
+import sys
 
-n = 1000000
-m = 1000
-
+n = int(sys.argv[1])
+m = int(sys.argv[2])
 
 tailles = [0] * n
 motif = [0] * m
