@@ -2,8 +2,9 @@
 
 import random
 
-n = 100000
-m = 10
+n = 1000000
+m = 1000
+
 
 tailles = [0] * n
 motif = [0] * m
