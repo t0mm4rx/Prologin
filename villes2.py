@@ -5,13 +5,6 @@ import math
 processed = []
 
 def la_meilleure_ville0(villes, n, lignes, m, gares, g):
-    """
-    for ville in range(1, n + 1):
-        for to in range(1, n + 1):
-            if (ville != to):
-                get_fastest_path(ville, to, villes, lignes, gares)
-    """
-
     for ville in range(1, n+1):
         average = 0
         nb = 0

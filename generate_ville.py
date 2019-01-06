@@ -3,8 +3,8 @@ import random
 import math
 
 n = int(sys.argv[1])
-l = random.randint(int(math.floor(n / 2)), int(n * 2))
-g = random.randint(int(math.floor(n / 10)), math.floor(int(n / 2)))
+l = random.randint(int(math.floor(n / 2)), int(n * 10))
+g = random.randint(int(math.floor(n / 10)), math.floor(int(n * 5)))
 
 retards = []
 lignes = []
@@ -14,10 +14,10 @@ for i in range(n):
     retards.append(random.randint(1, 10))
 
 for i in range(l):
-    lignes.append([random.randint(1, n + 1), random.randint(1, n + 1), random.randint(1, 15)])
+    lignes.append([random.randint(1, n), random.randint(1, n), random.randint(1, 15)])
 
 for i in range(g):
-    gares.append([random.randint(1, n + 1), random.randint(1, n + 1), random.randint(1, 10)])
+    gares.append([random.randint(1, n), random.randint(1, n), random.randint(1, 10)])
 
 
 with open('villesg', 'w+') as file:
